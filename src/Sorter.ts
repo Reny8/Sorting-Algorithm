@@ -1,19 +1,15 @@
-interface Sortable {
-  length: number;
-  compare(leftItem: number, rightItem: number): boolean;
-  swap(leftItem: number, rightItem: number): void;
-}
-export class Sorter {
-  constructor(public collection: Sortable) {}
-
+export abstract class Sorter {
+  abstract length: number;
+  abstract compare(leftItem: number, rightItem: number): boolean;
+  abstract swap(leftItem: number, rightItem: number): void;
   sort(): void {
     // DESTRUCTED BELOW
-    const { length } = this.collection;
+    const { length } = this;
     // BUBBLE SORT STRUCTURE
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection.compare(j, j + 1)) {
-          this.collection.swap(j, j + 1);
+        if (this.compare(j, j + 1)) {
+          this.swap(j, j + 1);
         }
       }
     }
