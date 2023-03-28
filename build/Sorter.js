@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sorter = void 0;
 class Sorter {
     constructor(collection) {
         this.collection = collection;
@@ -15,7 +16,6 @@ class Sorter {
                 }
             }
         }
-        console.log(this.collection.data);
     }
 }
-exports.default = Sorter;
+exports.Sorter = Sorter;

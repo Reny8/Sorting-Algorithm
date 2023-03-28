@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.NumbersCollection = void 0;
 class NumbersCollection {
     constructor(data) {
         this.data = data;
@@ -14,4 +15,4 @@ class NumbersCollection {
         return this.data[leftIndex] > this.data[rightIndex];
     }
 }
-exports.default = NumbersCollection;
+exports.NumbersCollection = NumbersCollection;

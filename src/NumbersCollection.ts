@@ -1,4 +1,4 @@
-export default class NumbersCollection {
+export class NumbersCollection {
   constructor(public data: number[]) {}
   len: number = this.data.length;
 

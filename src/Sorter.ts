@@ -1,6 +1,10 @@
-import NumbersCollection from "./NumbersCollection";
-export default class Sorter {
-  constructor(public collection: NumbersCollection) {}
+interface Sortable {
+  len: number;
+  compare(leftItem: number, rightItem: number): boolean;
+  swap(leftItem: number, rightItem: number): void;
+}
+export class Sorter {
+  constructor(public collection: Sortable) {}
 
   sort(): void {
     // DESTRUCTED BELOW
@@ -13,6 +17,5 @@ export default class Sorter {
         }
       }
     }
-    console.log(this.collection.data);
   }
 }
