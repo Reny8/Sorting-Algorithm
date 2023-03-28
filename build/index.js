@@ -1,24 +1,10 @@
 "use strict";
-class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    }
-    sort() {
-        // const len = this.collection.length
-        // DESTRUCTED BELOW
-        const { length } = this.collection;
-        // BUBBLE SORT STRUCTURE
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection[j] > this.collection[j + 1]) {
-                    const leftElement = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = leftElement;
-                }
-            }
-        }
-        console.log(this.collection);
-    }
-}
-const sorter = new Sorter([10, 3, -5, 0]);
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sorter_1 = __importDefault(require("./Sorter"));
+const NumbersCollection_1 = __importDefault(require("./NumbersCollection"));
+const numberCollection = new NumbersCollection_1.default([10000, 3, -5, 0]);
+const sorter = new Sorter_1.default(numberCollection);
 sorter.sort();
