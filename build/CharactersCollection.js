@@ -4,7 +4,7 @@ exports.CharactersCollection = void 0;
 class CharactersCollection {
     constructor(data) {
         this.data = data;
-        this.len = this.data.length;
+        this.length = this.data.length;
     }
     compare(leftIndex, rightIndex) {
         return (this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase());

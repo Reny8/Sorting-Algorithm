@@ -1,6 +1,6 @@
 export class CharactersCollection {
   constructor(public data: string) {}
-  len: number = this.data.length;
+  length: number = this.data.length;
   compare(leftIndex: number, rightIndex: number): boolean {
     return (
       this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase()

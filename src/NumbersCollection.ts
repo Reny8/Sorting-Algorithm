@@ -1,6 +1,6 @@
 export class NumbersCollection {
   constructor(public data: number[]) {}
-  len: number = this.data.length;
+  length: number = this.data.length;
 
   swap(leftIndex: number, rightIndex: number): void {
     const placeHolder = this.data[leftIndex];

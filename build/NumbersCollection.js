@@ -4,7 +4,7 @@ exports.NumbersCollection = void 0;
 class NumbersCollection {
     constructor(data) {
         this.data = data;
-        this.len = this.data.length;
+        this.length = this.data.length;
     }
     swap(leftIndex, rightIndex) {
         const placeHolder = this.data[leftIndex];
